@@ -5,7 +5,7 @@ document.querySelector("div").appendChild(p1);
 b.addEventListener("click",(e)=>{
     e.preventDefault();
 
-    fetch("http://localhost:5500/weather?search="+c.value).then((data)=>{
+    fetch("/weather?search="+c.value).then((data)=>{
     data.json().then((parsed)=>{
             p1.textContent = p1.textContent + parsed.content;
         

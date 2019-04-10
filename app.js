@@ -11,6 +11,7 @@ var pathname = path.join(__dirname,"/public");
 var viewname = path.join(__dirname,"/templates/views");
 var partial = path.join(__dirname,"/templates/partials");
 
+const port = process.env.PORT || 5500;
 
 server.use(express.static(pathname));
 
@@ -70,6 +71,6 @@ server.get("*", (req, res) => {
     res.render("error",{title : "Help me !!!"});
 })
 
-server.listen(5500,() =>{
+server.listen(port,() =>{
     console.log("started");
 });
