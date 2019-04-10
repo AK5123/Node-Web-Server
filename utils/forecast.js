@@ -13,7 +13,8 @@ var forecast=(lat,long,callback) =>{
                 Timezone: response.body.timezone,
                 Probability: response.body.currently.precipProbability,
                 Location: response.body.timezone,
-                Windspeed: response.body.currently.windSpeed
+                Windspeed: response.body.currently.windSpeed,
+                message: response.body.hourly.summary
             });
         }
     })

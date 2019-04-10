@@ -54,7 +54,8 @@ server.get("/weather",(req,res) =>{
                     }
                     else{
                         res.send({
-                            content: "Location is "+response.Location+".\n Probability of rainfall " + response.Probability + "%.\n Windspeed" + response.Windspeed 
+                            content: "Location is "+response.Location+".\n Probability of rainfall " + response.Probability + "%.\n Windspeed" + response.Windspeed ,
+                            message: response.message
                         })                    
                     }
  
